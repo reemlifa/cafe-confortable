@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca02n0um2hype"
-path="res://.godot/imported/coffee.png-a45dd1a528012156993274bd94572767.ctex"
+uid="uid://dcjgi1m6ceg70"
+path="res://.godot/imported/mug.png-405f9aeb2021379d1483a89b339af394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene1/coffee.png"
-dest_files=["res://.godot/imported/coffee.png-a45dd1a528012156993274bd94572767.ctex"]
+source_file="res://day1/assets/mug.png"
+dest_files=["res://.godot/imported/mug.png-405f9aeb2021379d1483a89b339af394.ctex"]
 
 [params]
 

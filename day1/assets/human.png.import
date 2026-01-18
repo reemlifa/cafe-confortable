@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vgxtcbula840"
-path="res://.godot/imported/message.png-9dcc98fc3b9a03e1df6dc07f1e1e51b4.ctex"
+uid="uid://cuaha86xtpere"
+path="res://.godot/imported/human.png-a3ba846640b3df5eb9b8d24599e37a2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene1/message.png"
-dest_files=["res://.godot/imported/message.png-9dcc98fc3b9a03e1df6dc07f1e1e51b4.ctex"]
+source_file="res://day1/assets/human.png"
+dest_files=["res://.godot/imported/human.png-a3ba846640b3df5eb9b8d24599e37a2a.ctex"]
 
 [params]
 

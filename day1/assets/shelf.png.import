@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbgevha82ypxy"
-path="res://.godot/imported/milk.png-55fec9c51264af07c11b1372b29dc029.ctex"
+uid="uid://b4jlbxj8rnj5s"
+path="res://.godot/imported/shelf.png-f595acc1846cbec6feff205e21527d41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene1/milk.png"
-dest_files=["res://.godot/imported/milk.png-55fec9c51264af07c11b1372b29dc029.ctex"]
+source_file="res://day1/assets/shelf.png"
+dest_files=["res://.godot/imported/shelf.png-f595acc1846cbec6feff205e21527d41.ctex"]
 
 [params]
 

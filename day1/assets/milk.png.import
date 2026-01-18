@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkqv5mmp0ataj"
-path="res://.godot/imported/icon.jpg-2106b83e979c8fdf0e72e3a8e9a6df94.ctex"
+uid="uid://bbgevha82ypxy"
+path="res://.godot/imported/milk.png-901ea1fa32d0573f220b429ba1af343c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene1/icon.jpg"
-dest_files=["res://.godot/imported/icon.jpg-2106b83e979c8fdf0e72e3a8e9a6df94.ctex"]
+source_file="res://day1/assets/milk.png"
+dest_files=["res://.godot/imported/milk.png-901ea1fa32d0573f220b429ba1af343c.ctex"]
 
 [params]
 

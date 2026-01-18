@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuaha86xtpere"
-path="res://.godot/imported/human.png-7b9a0343b54778e78b71c50b742c6039.ctex"
+uid="uid://dbkh45bf4gry6"
+path="res://.godot/imported/fridge.png-0f1b71828a410b04aa59d50325206809.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene1/human.png"
-dest_files=["res://.godot/imported/human.png-7b9a0343b54778e78b71c50b742c6039.ctex"]
+source_file="res://day1/assets/fridge.png"
+dest_files=["res://.godot/imported/fridge.png-0f1b71828a410b04aa59d50325206809.ctex"]
 
 [params]
 

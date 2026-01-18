@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://dgmuq2ojq85cw"]
 
-[ext_resource type="Script" uid="uid://sid4eve0tysk" path="res://scene1/scene.gd" id="1_snwgy"]
-[ext_resource type="Texture2D" uid="uid://pvg8v8xqr186" path="res://scene1/table.png" id="1_ulcgi"]
-[ext_resource type="Texture2D" uid="uid://cuaha86xtpere" path="res://scene1/human.png" id="2_3253y"]
-[ext_resource type="Texture2D" uid="uid://vgxtcbula840" path="res://scene1/message.png" id="3_u3cyc"]
-[ext_resource type="Texture2D" uid="uid://ca02n0um2hype" path="res://scene1/coffee.png" id="4_u3cyc"]
-[ext_resource type="Texture2D" uid="uid://bbgevha82ypxy" path="res://scene1/milk.png" id="5_m7jmp"]
+[ext_resource type="Script" uid="uid://sid4eve0tysk" path="res://day1/first_order_scene/scene.gd" id="1_5olq4"]
+[ext_resource type="Texture2D" uid="uid://pvg8v8xqr186" path="res://day1/assets/table.png" id="2_gb8qi"]
+[ext_resource type="Texture2D" uid="uid://cuaha86xtpere" path="res://day1/assets/human.png" id="3_ms4me"]
+[ext_resource type="Texture2D" uid="uid://vgxtcbula840" path="res://day1/assets/message.png" id="4_moap1"]
+[ext_resource type="Texture2D" uid="uid://ca02n0um2hype" path="res://day1/assets/coffee.png" id="5_8avus"]
+[ext_resource type="Texture2D" uid="uid://bbgevha82ypxy" path="res://day1/assets/milk.png" id="6_51l3n"]
 
 [node name="game" type="Node2D"]
-script = ExtResource("1_snwgy")
+script = ExtResource("1_5olq4")
 customer_path = NodePath("customer")
 messageBox_path = NodePath("messageBox")
 coffee_path = NodePath("messageBox/orderIcons/coffee")
@@ -19,7 +19,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_ulcgi")
+texture = ExtResource("2_gb8qi")
 
 [node name="customer" type="TextureRect" parent="."]
 visible = false
@@ -27,7 +27,7 @@ offset_left = 120.0
 offset_top = 64.0
 offset_right = 480.0
 offset_bottom = 424.0
-texture = ExtResource("2_3253y")
+texture = ExtResource("3_ms4me")
 
 [node name="messageBox" type="TextureRect" parent="."]
 visible = false
@@ -35,7 +35,7 @@ offset_left = 400.0
 offset_top = -176.0
 offset_right = 1024.0
 offset_bottom = 352.0
-texture = ExtResource("3_u3cyc")
+texture = ExtResource("4_moap1")
 
 [node name="orderIcons" type="HBoxContainer" parent="messageBox"]
 layout_mode = 0
@@ -49,11 +49,11 @@ alignment = 1
 [node name="coffee" type="TextureRect" parent="messageBox/orderIcons"]
 visible = false
 layout_mode = 2
-texture = ExtResource("4_u3cyc")
+texture = ExtResource("5_8avus")
 stretch_mode = 5
 
 [node name="milk" type="TextureRect" parent="messageBox/orderIcons"]
 visible = false
 layout_mode = 2
-texture = ExtResource("5_m7jmp")
+texture = ExtResource("6_51l3n")
 stretch_mode = 5
