@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgmuq2ojq85cw"]
+
+[ext_resource type="Texture2D" uid="uid://pvg8v8xqr186" path="res://scene1/table.png" id="1_ulcgi"]
+[ext_resource type="Texture2D" uid="uid://cuaha86xtpere" path="res://scene1/human.png" id="2_3253y"]
+[ext_resource type="Texture2D" uid="uid://vgxtcbula840" path="res://scene1/message.png" id="3_u3cyc"]
+[ext_resource type="Texture2D" uid="uid://ca02n0um2hype" path="res://scene1/coffee.png" id="4_u3cyc"]
+[ext_resource type="Texture2D" uid="uid://bbgevha82ypxy" path="res://scene1/milk.png" id="5_m7jmp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m7jmp"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[node name="game" type="Node2D"]
+
+[node name="table" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ulcgi")
+
+[node name="customer" type="TextureRect" parent="."]
+offset_left = 120.0
+offset_top = 64.0
+offset_right = 480.0
+offset_bottom = 424.0
+texture = ExtResource("2_3253y")
+
+[node name="messageBox" type="TextureRect" parent="."]
+offset_left = 400.0
+offset_top = -176.0
+offset_right = 1024.0
+offset_bottom = 352.0
+texture = ExtResource("3_u3cyc")
+
+[node name="messageLabel" type="Label" parent="messageBox"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 248.0
+offset_right = 200.0
+offset_bottom = 427.0
+text = "1"
+label_settings = SubResource("LabelSettings_m7jmp")
+
+[node name="coffee" type="TextureRect" parent="."]
+offset_left = 472.0
+offset_top = -176.0
+offset_right = 928.0
+offset_bottom = 328.0
+texture = ExtResource("4_u3cyc")
+
+[node name="milk" type="TextureRect" parent="."]
+visible = false
+offset_left = 456.0
+offset_top = -216.0
+offset_right = 952.0
+offset_bottom = 360.0
+texture = ExtResource("5_m7jmp")
