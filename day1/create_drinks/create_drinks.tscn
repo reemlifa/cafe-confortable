@@ -1,33 +1,77 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh2qccxff6xj5"]
+[gd_scene load_steps=11 format=3 uid="uid://bh2qccxff6xj5"]
 
 [ext_resource type="Texture2D" uid="uid://pvg8v8xqr186" path="res://day1/assets/table.png" id="1_qdlxd"]
 [ext_resource type="Texture2D" uid="uid://dbkh45bf4gry6" path="res://day1/assets/fridge.png" id="2_s4vca"]
-[ext_resource type="Texture2D" uid="uid://ca08r5no5xkjj" path="res://day1/assets/fridge_open.png" id="3_s4vca"]
 [ext_resource type="Texture2D" uid="uid://b4jlbxj8rnj5s" path="res://day1/assets/shelf.png" id="4_fe7e7"]
 [ext_resource type="Texture2D" uid="uid://dcjgi1m6ceg70" path="res://day1/assets/mug.png" id="5_1beu8"]
+[ext_resource type="Texture2D" uid="uid://uvinusujovcr" path="res://day1/assets/coffee-machine-animation.png" id="6_df05t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1beu8"]
+size = Vector2(225, 289)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_df05t"]
+size = Vector2(61, 102.5)
+
+[sub_resource type="Animation" id="Animation_3q4gr"]
+resource_name = "brew"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.1, 0.16666667, 0.23333333, 0.3, 0.36519402, 0.4, 0.43333334, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_38fp6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhymv"]
+_data = {
+&"RESET": SubResource("Animation_38fp6"),
+&"brew": SubResource("Animation_3q4gr")
+}
 
 [node name="create_drinks" type="Node2D"]
 
 [node name="table" type="TextureRect" parent="."]
-offset_top = 128.0
+offset_top = 136.0
 offset_right = 1152.0
-offset_bottom = 584.0
+offset_bottom = 592.0
 texture = ExtResource("1_qdlxd")
 
-[node name="fridge" type="TextureRect" parent="."]
-texture_filter = 1
-offset_left = 56.0
-offset_top = 88.0
-offset_right = 560.0
-offset_bottom = 680.0
+[node name="fridge open" type="Node2D" parent="."]
+position = Vector2(56, 88)
+
+[node name="fridge" type="Node2D" parent="."]
+position = Vector2(56, 88)
+
+[node name="Sprite2D" type="Sprite2D" parent="fridge"]
+position = Vector2(252.00003, 291.99997)
+scale = Vector2(1.9062501, 2.2812498)
 texture = ExtResource("2_s4vca")
 
-[node name="fridge_open" type="TextureRect" parent="."]
-offset_left = 56.0
-offset_top = 88.0
-offset_right = 560.0
-offset_bottom = 680.0
-texture = ExtResource("3_s4vca")
+[node name="Area2D" type="Area2D" parent="fridge"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fridge/Area2D"]
+position = Vector2(247.5, 367.5)
+shape = SubResource("RectangleShape2D_1beu8")
 
 [node name="shelf" type="TextureRect" parent="."]
 texture_filter = 1
@@ -52,3 +96,21 @@ offset_top = 176.0
 offset_right = 360.0
 offset_bottom = 432.0
 texture = ExtResource("5_1beu8")
+
+[node name="CoffeeMachine" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CoffeeMachine"]
+position = Vector2(592, 384)
+texture = ExtResource("6_df05t")
+hframes = 10
+
+[node name="Area2D" type="Area2D" parent="CoffeeMachine"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CoffeeMachine/Area2D"]
+position = Vector2(584, 380.75)
+shape = SubResource("RectangleShape2D_df05t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CoffeeMachine"]
+libraries = {
+&"": SubResource("AnimationLibrary_bhymv")
+}
